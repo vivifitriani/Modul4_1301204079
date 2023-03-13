@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vivi Fitriani_1301204079</title>
+</head>
+<body>
+    <h1>Praktikum ABP Modul 4</h1>
+    <h4> Nama: Vivi Fitriani</h4>
+    <h4> NIM: 1301204079</h4>
+    <h3> Lagu favorite vivi</h3>
+    <p id="abp"></p>
+    <h3> Lagu-Lagu dari album lover </h3>
+    <p id="alfa"></p>
+    <h3> Album Favorite vivi </h3>
+    <p id ="d"></p>
+    <h3> Album-Album Taylor Swift</h3>
+    <p id ="t"></p>
+    <h3> Platform Tiket Konser</h3>
+    <p id="j"></p>
+    <h3> Lagu dari album reputation</h3>
+    <p id="lagu"></p>
+    <h3> Biodata Taylor swift</h3>
+    <p id ="biodata"></p>
+    <h3> Lagu dari album 1989</h3>
+    <p id = "album"></p>
+    <script>
+        //variabel
+        var a = 1;
+        var Nama = ".Taylor Swift";
+        var s = " - "
+        var lagu = "Cruel Summer";
+        document.getElementById("abp").innerHTML = a+Nama+s+lagu;
+
+        //array
+        var array = ["Daylight","Afterglow", "London Boy","Paper Rings"]; array.length 
+        array.push("The Man"); 
+        document.getElementById("alfa").innerHTML = array;
+        var data = ["Lover", 2, true];
+        document.getElementById("d").innerHTML = data[0];
+
+        //Pengendalian Struktur
+        var album;
+        var Nomor = "2";
+        if (Nomor === "1") { album = "1989";
+        } else if (Nomor === "2") { album = "Midnights";
+        } else if (Nomor === "33") { album = "Lover";
+        } else { album = "Tidak Diketahui";
+        }
+        document.getElementById("t").innerHTML =album ;
+
+        //Pembuatan Object
+        var jadwal = {platform: "Tiketcom", Tanggal: "20 November 2023", NegaraTujuan: "Indonesia", 
+        Tempat: "SICC" };
+        document.getElementById("j").innerHTML = jadwal.platform;
+
+        //Akses nilai property
+        var myObj = {
+        name: "Taylor Swift",
+        age: 33,
+        song:{
+        song1: "Delicate",
+        song2: "Echanted",
+        song3: "Style"}
+        } 
+        document.getElementById("lagu").innerHTML = myObj.song["song1"];
+
+        //Prototype pada javascript
+        function bio(first, last, age, eye) {
+        this.firstName = first;
+        this.lastName = last;
+        this.age = age;
+        this.eyeColor = eye;
+        this.nationality = "English";
+        }
+        var taylor = new bio("Taylor", "Swift", 33, "blue");
+        document.getElementById("biodata").innerHTML ="The nationality of Taylor Swift is " + taylor.nationality;
+
+        //Pembuatan Fungsi
+         var album2 = {
+            song1 : "Style",
+            song2 : "This Love",
+            song3 : "Wildest Dream",
+            album1989: function(){
+                return this.song1+" , "+this.song2+" , "+this.song3;
+            }
+         }
+         document.getElementById("album").innerHTML =album2.album1989();
+    </script>
+    <h3> Hi Nice Too see You</h3>
+    <p id="id01">Hello Pretty!</p>
+    <p id="id02">Hello Handsome!</p>    
+    <script>
+    document.getElementById("id02").remove();
+    </script>    
+    <script>
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+    <script>
+        $(document).ready(function(){
+        $("#hide").click(function(){
+        $("p").hide();});
+        $("#show").click(function(){
+        $("p").show();});});
+        </script>
+        </head>
+        <body>
+        <h3> Click in Here</h3>
+        <p>If you want To Buy Taylor Swift Album</p>
+        <button id="hide">Back</button>
+        <button id="show">Buy</button>
+    <script>
+        src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> 
+        <script>
+        $(document).ready(function(){
+        $("button").click(function(){ $("div").animate({
+        height: 'toggle'});});});
+        </script>
+        </head>
+        <body>
+        <h4>PRAKTIKUM APLIKASI BERBASIS PLATFORM</h4>
+        <h4> The Eras Tour</h4>
+        <p>Click the button multiple times to see our queen Taylor Swift</p>
+        <button>Taylor Swift</button>
+        <p> The Eras Tour is the upcoming sixth headlining concert Tour
+            by American singer-songwriter Taylor Swift.Having not toured for her studio
+            Albums Lover, Folklore and Evermore due to the COVID-19 pandemic
+        </p>
+        <div
+        style="background:#bf2121;height:100px;width:100px;position:absolute;"></div>
+    </script>
+</body>
+</html>
